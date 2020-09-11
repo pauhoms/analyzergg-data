@@ -1,14 +1,10 @@
 name: CI
 
-on:
-  release:
-    types: [created]
+on: push
 
 jobs:
-  deploy:
-
+  CI:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
