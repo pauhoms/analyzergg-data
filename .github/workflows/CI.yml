@@ -13,17 +13,9 @@ jobs:
       with:
         python-version: '3.8'
 
-    - name: 📚 Create env variables
-      run: export RIOT_API_KEY=hola
-
     - name: 📚 Install libraries
-      run: pip install flake8
+      run: pip install requirements.txt
 
     - name: 📝 Style Tests
       run: flake8 .
-
-    - name: test
-      run: |
-          cd easy_dodger
-          python -m training.raw_data.test
 
