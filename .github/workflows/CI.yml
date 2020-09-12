@@ -25,5 +25,5 @@ jobs:
     - name: test
       run: |
           cd easy_dodger
-          python training/raw_data/test.py
+          python -m training.raw_data.test
 
