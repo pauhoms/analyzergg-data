@@ -14,7 +14,7 @@ jobs:
         python-version: '3.8'
 
     - name: 📚 Install libraries
-      run: pip install requirements.txt
+      run: pip install .github/workflows/requirements.txt
 
     - name: 📝 Style Tests
       run: flake8 .
