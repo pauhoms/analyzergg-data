@@ -13,14 +13,11 @@ jobs:
       with:
         python-version: '3.8'
 
-    - name: 👨‍💼 Install pipenv
-      run: |
-        python -m pip install --upgrade pip
-        pip install pipenv
+    - name: 📚 Create env variables
+      run: export RIOT_API_KEY=hola
 
     - name: 📚 Install libraries
-      run: |
-        pipenv install
+      run: pip install flake8
 
     - name: 📝 Style Tests
-      run: pipenv run flake8 .
+      run: flake8 .
