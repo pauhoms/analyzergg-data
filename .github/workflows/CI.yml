@@ -23,4 +23,5 @@ jobs:
 
     - name: test conf
       run: |
+        cd easy_dodger
         python -m shared.config
