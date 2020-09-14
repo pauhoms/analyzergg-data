@@ -3,9 +3,10 @@ name: CI
 on: push
 
 jobs:
-  CI:
+  easy_dodger_CI:
     runs-on: ubuntu-latest
     steps:
+    
     - uses: actions/checkout@v2
 
     - name: Set up Python
@@ -20,9 +21,3 @@ jobs:
 
     - name: 📝 Style Tests
       run: flake8 .
-
-    - name: test conf
-      run: |
-        python -m easy_dodger.shared.config
-      env:
-        RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
