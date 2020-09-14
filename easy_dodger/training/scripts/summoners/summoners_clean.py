@@ -6,6 +6,7 @@ from config import RIOT_API_KEY
 _ALL_TIERS = ['IRON', 'BRONZE', 'SILVER', 'GOLD',
               'PLATINUM', 'DIAMOND']
 _ALL_DIVISIONS = ['I', 'II', 'III', 'IV']
+_USELESS_SUMMONERS_FIELDS = ['inactive', 'queueType']
 _HTTP = urllib3.PoolManager()
 
 
@@ -45,7 +46,11 @@ def _get_summoners_from_that_division(tier, division, all_summoners):
             all_summoners
         ])
 
-    return all_summoners
+    return _clean_summoners_fields(all_summoners)
+
+
+def _clean_summoners_fields(all_summoners) -> pd.DataFrame:
+    return all_summoners.drop(_USELESS_SUMMONERS_FIELDS, 1)
 
 
 def _generate_file(players) -> None:
