@@ -1,6 +1,6 @@
 import pandas as pd
 import urllib3
-from shared.config import RIOT_API_KEY
+from config import RIOT_API_KEY
 
 
 _ALL_TIERS = ['IRON', 'BRONZE', 'SILVER', 'GOLD',
@@ -39,7 +39,7 @@ def _get_all_summoners() -> pd.DataFrame:
 
 
 def _generate_file(players) -> None:
-    players.to_csv('training/data/summoners/summoners_clean.csv')
+    players.to_csv('training/data/summoners_clean.csv')
 
 
 if __name__ == "__main__":
