@@ -24,3 +24,5 @@ jobs:
     - name: test conf
       run: |
         python -m easy_dodger.shared.config
+      env:
+        RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
