@@ -21,3 +21,6 @@ jobs:
     - name: 📝 Style Tests
       run: flake8 .
 
+    - name: test conf
+      run: |
+        python -m shared.config
