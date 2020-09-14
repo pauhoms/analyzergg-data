@@ -23,7 +23,7 @@ def _get_all_summoners() -> pd.DataFrame:
                     all_summoners
                 )
 
-    return all_summoners.summonerName
+    return all_summoners
 
 
 def _get_summoners_from_that_division(tier, division, all_summoners):
